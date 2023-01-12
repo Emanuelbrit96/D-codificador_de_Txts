@@ -10,10 +10,16 @@ const texto_cripto = document.querySelector(".texto_cripto");
 const caixa_h1 = document.querySelector(".caixa_h1");
 const caixa_p = document.querySelector(".caixa_p");
 
+const chk = document.getElementById("chk");
+const value = getComputedStyle(document.documentElement).getPropertyValue(
+  "--color-bs"
+);
+
 cripto.onclick = criptar;
 descripto.onclick = descriptar;
 bt_cripto.onclick = copiar;
 btn_reset.onclick = resetar;
+chk.onclick = drk_mode;
 
 function criptar() {
   const cripto = f_criptar();
@@ -74,4 +80,20 @@ function resetar() {
   texto_cripto.style.display = "none";
   caixa_h1.style.display = "block";
   caixa_p.style.display = "block";
+}
+
+function drk_mode() {
+  if (chk.checked) {
+    document.documentElement.style.setProperty("--color-bs", "#5B5656");
+    document.documentElement.style.setProperty("--color-principal", "#ffffff");
+    document.documentElement.style.setProperty("--color-white", "#205CA5");
+    document.documentElement.style.setProperty("--color-grey", " #BCD6EB");
+    console.log(chk.checked);
+  } else {
+    document.documentElement.style.setProperty("--color-bs", "#e5e5e5");
+    document.documentElement.style.setProperty("--color-principal", "#0a3871");
+    document.documentElement.style.setProperty("--color-white", "#ffffff");
+    document.documentElement.style.setProperty("--color-grey", " #495057");
+    console.log(chk.checked);
+  }
 }

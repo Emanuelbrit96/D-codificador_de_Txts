@@ -1,3 +1,9 @@
+:root {
+  --color-bs: #e5e5e5;
+  --color-principal: #0a3871;
+  --color-white: #ffffff;
+  --color-grey: #495057;
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +17,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e5e5e5;
+  background: var(--color-bs);
 }
 .logo {
   position: absolute;
@@ -46,7 +52,7 @@ main {
   justify-content: center;
   text-align: center;
 
-  background: #ffffff;
+  background: var(--color-white);
   border-radius: 32px;
 
   box-shadow: 0px 24px 32px -8px #00000014;
@@ -61,8 +67,8 @@ main {
 }
 textarea {
   margin: 50px 0;
-  background: #e5e5e5;
-  color: #0a3871;
+  background: var(--color-bs);
+  color: var(--color-principal);
 
   font-size: 32px;
   border: none;
@@ -70,10 +76,9 @@ textarea {
 }
 
 textarea::placeholder {
-  color: #0a3871;
+  color: var(--color-principal);
 }
 textarea:focus {
-  background: #e5e5e5;
   box-shadow: 0 0 0 0;
   outline: 0;
 }
@@ -96,9 +101,11 @@ h1 {
 }
 .exclamacao p {
   font-size: 12px;
+  color: var(--color-grey);
 }
-.exclamacao img {
+.exclamacao i {
   margin-right: 8px;
+  color: var(--color-grey);
 }
 
 button {
@@ -117,15 +124,15 @@ button:hover {
 }
 
 .btn_cripto {
-  background: #0a3871;
+  background: var(--color-principal);
 
-  color: #ffffff;
+  color: var(--color-white);
 }
 .btn_descripto {
-  background: #d8dfe8;
+  background: var(--color-bs);
 
-  color: #0a3871;
-  border: 1px solid #0a3871;
+  color: var(--color-principal);
+  border: 1px solid var(--color-principal);
 }
 .bt-copiar {
   display: none;
@@ -133,8 +140,10 @@ button:hover {
   position: absolute;
   bottom: 55px;
   margin-left: 35px;
-  background: #ffffff;
-  border: 1px solid #0a3871;
+
+  color: var(--color-principal);
+  background: var(--color-white);
+  border: 1px solid var(--color-principal);
 }
 
 .texto_cripto {
@@ -148,7 +157,7 @@ button:hover {
   font-size: 24px;
   color: #495057;
 
-  background: #ffffff;
+  background: var(--color-white);
 }
 
 .reset {
@@ -169,13 +178,22 @@ button:hover {
 
   font-size: 20px;
 
-  color: #ffffff;
+  color: var(--color-white);
   transition: 1s all;
-  background-color: #0a3871;
+  background-color: var(--color-principal);
 }
 .reset:hover {
   box-shadow: none;
   transform: rotate(-180deg);
+}
+
+.caixa_h1 {
+  margin: 0 15px;
+  color: var(--color-grey);
+}
+#p_txt {
+  margin: 10px 15px;
+  color: var(--color-grey);
 }
 
 /* Media */
@@ -244,8 +262,65 @@ button:hover {
 
   .caixa_h1 {
     margin: 0 15px;
+    color: var(--color-grey);
   }
   .caixa_p {
     margin: 10px 15px;
+    color: var(--color-grey);
   }
+}
+
+.dark-mode {
+  position: absolute;
+  top: 10px;
+  right: 70px;
+}
+.checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+label {
+  position: absolute;
+
+  background: var(--color-principal);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 5px;
+  height: 26px;
+  width: 50px;
+
+  transform: scale(1.2);
+}
+
+label .ball {
+  background-color: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+
+  height: 22px;
+  width: 22px;
+
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: var(--color-white);
+}
+.fa-sun {
+  color: var(--color-white);
+}
+.fa-circle-exclamation {
+  color: #000000;
 }
