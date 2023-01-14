@@ -17,7 +17,7 @@ cripto.onclick = criptar;
 descripto.onclick = descriptar;
 bt_cripto.onclick = copiar;
 btn_reset.onclick = reset;
-window.onload = getThemeFromLocalStorage;
+window.onload = getThemeFromLocalStorage; //<- Ao dar load na pagina executar essa função
 
 function criptar() {
   const cripto = f_criptar();
