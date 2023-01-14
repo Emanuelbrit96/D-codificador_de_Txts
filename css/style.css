@@ -24,6 +24,9 @@ body {
   top: 40px;
   left: 84px;
 }
+svg path {
+  fill: var(--color-principal);
+}
 main {
   width: 80%;
   height: 80vh;
@@ -195,6 +198,9 @@ button:hover {
   margin: 10px 15px;
   color: var(--color-grey);
 }
+.texto_cripto {
+  color: var(--color-grey);
+}
 
 /* Media */
 
@@ -323,4 +329,8 @@ label .ball {
 }
 .fa-circle-exclamation {
   color: #000000;
+}
+
+svg {
+  color: #ffffff;
 }
